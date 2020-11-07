@@ -1,1 +1,1 @@
-# CS4476-Project
+# Motion Prediction of Traffic Actors with Multi-mode Confidence
