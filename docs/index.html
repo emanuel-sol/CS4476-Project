@@ -6075,17 +6075,17 @@ color: #FF9900;
 <div class="page-header">
 
 <!-- Title and Name --> 
-<h1 style="color: white">Lyft Motion Prediction for Autonomous Vehicles</h1> 
+<h1 style="color: white">Motion Prediction of Traffic Actors with Multi-mode Confidence</h1> 
 <span style="font-size: 20px; line-height: 1.5em;color: white"><strong>Trevor G, Emanuel S, Garritt G, Matthew M, and Vijay N</strong></span><br>
 <span style="font-size: 18px; line-height: 1.5em;color: white">Fall 2020 CS 4476 Computer Vision: Class Project</span><br>
-<span style="font-size: 18px; line-height: 1.5em;color: white">Georgia Tech</span>
+<span style="font-size: 18px; line-height: 1.5em;color: white">Georgia Institute of Technology</span>
 <hr>
 
 <!-- Goal -->
     <div style="background-color: antiquewhite;padding: 10px">
 <h3>Abstract</h3>
 <p>
-  Currently, many self-driving cars rely on rule based models to make decisions about when, where, and how to maneuver; however, the real world often doesn’t follow these rules and comes with many uncertainties. In order to make a future where self-driving cars make transportation safer, environment-friendly and more accessible for everyone, they must be able to reliably predict the movement of traffic agents around the autonomous vehicle (AV), such as cars, cyclists, and pedestrians. We are using a multimodal model to generate multiple hypotheses (up to 3) -  further described by a confidence vector  - to predict the trajectories of traffic actors surrounding an AV in a given scene. On our 12000th iteration, we reached a NLL of 22.48 which translates to a 1.73 * 10^(-10) chance of a correct prediction. It seems as though we would need to train on a much larger subset of data to achieve the accuracy desired. We were able to generally predict the actions of actors in simple straight lane configurations quite well, but when the environment became more complex and curved, such as highways and complex intersections, our model struggled to correctly predict the actions of actors
+Currently, many self-driving cars rely on rule based models to make decisions about when, where, and how to maneuver; however, the real world often doesn’t follow these rules and comes with many uncertainties. In order to create a future where self-driving cars make transportation safer, more eco-friendly and more accessible for everyone, they must be able to reliably predict the movement of traffic agents around the autonomous vehicle (AV), such as cars, cyclists, and pedestrians. We used a deep learning-based approach that utilized bird’s-eye-view (BEV) rasters of a traffic actor’s surroundings with up to 5 frames of historical data (depending on scene information) to generate 3 hypotheses of 50 point estimates -  further described by a confidence vector  - to describe the future position of a given traffic actor with multimode confidence. Due to hardware constraints we were only able to train the model on approximately 1% of the provided dataset and scored a negative log likelihood of 22.48. We were able to generally predict the positions of actors in simple straight lane configurations quite well, but when the environment became more complex at intersections or curvy roads our model struggled to make accurate predictions. To achieve better results we would certainly need to train on a much larger subset of the data and provide additional state information that can’t be inferred from the BEV rasters such as velocity, acceleration, and heading change rate. In order to combat extremely long training times (approximately 43 days on a single CPU and GPU) we suggest creating a novel, much more lightweight architecture that minimizes the number of operations necessary while maintaining prediction accuracy.
 </p>
 
     </div>
@@ -6199,7 +6199,7 @@ Kingma, Diederik P., and Jimmy Ba. "Adam: A method for stochastic optimization."
     </div>
   <hr>
   <footer> 
-  <p style="color: white">© Trevor G, Emanuel S, Garritt G, Matthew M, and Vijay N<</p>
+  <p style="color: white">© Trevor G, Emanuel S, Garritt G, Matthew M, and Vijay N</p>
   </footer>
 </div>
 </div>
